@@ -1,0 +1,182 @@
+<!--
+  Proyecto: Conservar Sostenible
+  Evidencia: GA7-220501096-AA4-EV03
+  Módulo: Frontend
+  Autora: Julie Dayanne Bohórquez Chacón
+  Fecha: 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Permite que la página sea adaptable (responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icono pequeño que se muestra en la pestaña del navegador -->
+  <link rel="shortcut icon" href="assets/img/apple-touch-icon.png" type="image/x-icon">
+
+  <!-- Librería de iconos Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Archivo de estilos principal -->
+  <link rel="stylesheet" href="assets/CSS/style.css">
+
+  <!-- Librería FontAwesome para iconos adicionales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Estilos de Swiper (slider de imágenes) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <title>conservar sostenible</title>
+</head>
+
+<body>
+
+  <!-- ===================== HEADER / ENCABEZADO ===================== -->
+  <header class="header">
+
+    <div class="menu container">
+
+      <!-- Logo de la página -->
+      <a href="#" class="logo">CONSERVAR SOSTENIBLE</a>
+
+      <!-- Checkbox que controla la apertura del menú responsive -->
+      <input type="checkbox" id="menu" />
+
+      <!-- Ícono del menú -->
+      <label for="menu">
+        <img src="assets/img/menu.png" class="menu-icon" alt="">
+      </label>
+
+      <!-- Barra de navegación -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="paginas/Servicios.html">Servicios</a></li>
+          <li><a href="paginas/Tienda.html">Tienda</a></li>
+          <li><a href="paginas/Reservaciones.html">Reservaciones</a></li>
+          <li><a href="paginas/Contacto.html">Contacto</a></li>
+
+          <!-- Botón que abre el modal de inicio de sesión -->
+          <li><a href="paginas/" id="login-btn">Inicio de Sesión</a></li>
+        </ul>
+      </nav>
+
+      <!-- Iconos de redes sociales -->
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+
+    </div>
+
+    <!-- Contenido principal del encabezado -->
+    <div class="header-content container">
+      <div class="header-txt">
+        <h1>TU MEJOR DESTINO PARA DISFRUTAR</h1>
+
+        <p>
+          Porque para CONSERVAR tu alegría necesitas disfrutar de la belleza
+          de este mundo con sus diferentes sitios turísticos y sus ambientes
+          acogedores. ¡Qué esperas!
+        </p>
+
+        <a href="#" class="btn-1">Sección menú</a>
+      </div>
+    </div>
+
+    <!-- ===================== SLIDER DE IMÁGENES ===================== -->
+    <div class="images">
+      <div class="swiper myswiper">
+        <div class="swiper-wrapper">
+
+          <!-- Cada una de estas "swiper-slide" es una imagen del carrusel -->
+          <div class="swiper-slide">
+            <img src="assets/img/home-img-3.png" alt="">
+            <h3>Turísticos</h3>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/home-img-1.png" alt="">
+            <h3>Playa</h3>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/home-img-2.png" alt="">
+            <h3>Naturaleza</h3>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/home-img-4.png" alt="">
+            <h3>Sensaciones</h3>
+          </div>
+
+          <div class="swiper-slide">
+            <img src="assets/img/testimonial-img.png" alt="">
+            <h3>Campamento</h3>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Botones del slider -->
+    <div class="rows">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Modal que muestra imágenes ampliadas -->
+    <div id="image-modal" class="modal">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content" id="modal-img" alt="Imagen ampliada">
+    </div>
+
+  </header>
+
+  <!-- ===================== MODAL LOGIN / REGISTRO ===================== -->
+  <div id="login-modal" class="modal-login">
+    <div class="login-content">
+
+      <!-- Botón para cerrar -->
+      <span class="login-close">&times;</span>
+
+      <!-- Pestañas para cambiar entre iniciar sesión y registrarse -->
+      <div class="login-tabs">
+        <button class="tab-btn active" data-tab="login">Iniciar Sesión</button>
+        <button class="tab-btn" data-tab="register">Registrarse</button>
+      </div>
+
+      <!-- Formulario de Login -->
+      <form id="login-form" class="tab-content active">
+        <input type="text" placeholder="Usuario o correo" required>
+        <input type="password" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Ingresar</button>
+      </form>
+
+      <!-- Formulario de Registro -->
+      <form id="register-form" class="tab-content" method="post" action="registrar.php">
+        <input type="text" name="Nombre" placeholder="Nombre completo" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <input type="password" name="Contraseña" placeholder="Contraseña" required>
+        <button type="submit" class="btn-register">Crear Cuenta</button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <!-- Librería Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Archivo JS principal del proyecto -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+
+

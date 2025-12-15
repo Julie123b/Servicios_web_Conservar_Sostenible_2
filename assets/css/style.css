@@ -1,0 +1,209 @@
+/* 
+   Estilos del proyecto Conservar Sostenible
+   Evidencia: GA7-220501096-AA4-EV03
+   Autora: Julie Dayanne Bohórquez Chacón
+   Fecha: 2025
+   Descripción: Archivo principal de estilos para la interfaz del proyecto.
+  */
+
+/* Importación de fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+/* Reset general: elimina márgenes, padding y estilos por defecto */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Fuente general del sitio */
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor centrado con ancho máximo */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header principal con imagen de fondo */
+.header{
+  background-image: url(../img/destination-img-1.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Barra superior de navegación */
+.menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilo del logo */
+.logo{
+  color: rgba(244, 249, 245, 0.935);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Estructura de la navegación */
+.menu .navbar ul li{
+  position: relative;
+  float: left;
+}
+
+/* Estilos de los enlaces del menú */
+.menu .navbar ul li a{
+  font-size: 18px;
+  padding: 20px;
+  color: aliceblue;
+  display: block;
+  font-weight: bold;
+}
+
+/* Hover del menú */
+.menu .navbar ul li a:hover {
+  color: #07ed07;
+}
+
+/* Iconos de usuario / login */
+.icons{
+  display: flex;
+}
+
+.icons{
+  font-size: 25px;
+  color: #ffffff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* Hover en iconos */
+.icons i:hover{
+  color: #266371;
+}
+
+/* Checkbox para menú móvil */
+#menu{
+  display: none;
+}
+
+/* Icono del menú hamburguesa (mobile) */
+.menu-icon{
+  width: 25px;
+}
+
+/* Oculto en desktop */
+.menu  label{
+  cursor: pointer;
+  display: none;
+}
+
+/* Contenido del texto en el header */
+.header-txt{
+  width: 40%;
+}
+
+/* Título principal */
+.header-txt h1{
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #0846c3;
+  margin-bottom: 25px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Párrafo del header */
+.header-txt p {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+/* Botón de acción */
+.btn-1{
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgb(8, 117, 117);
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* Hover del botón */
+.btn-1:hover{
+  background-color: #0a3b9f5f;
+}
+
+/* Contenedor de imágenes del slider */
+.images{
+  width: 800px;
+  height: 300px;
+  position: absolute;
+  right: 0;
+}
+
+/* Swiper JS (carrusel) */
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo de cada slide */
+.swiper-slide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Texto dentro del slide */
+.swiper-slide h3{
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+/* Imagen del slide */
+.swiper-slide img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Posición de flechas extra */
+.rows{
+  width: 180px;
+  position: absolute;
+  right: 620px;
+  bottom: 120px;
+}
+
+/* Botones del carrusel */
+.swiper-button-next,
+.swiper-button-prev {
